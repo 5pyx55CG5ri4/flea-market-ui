@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html lang="">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+    <link rel="icon" href="./favicon.ico">
+    <title>FleaMarket</title>
+</head>
+<body>
+<noscript>
+    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
+        Please enable it to continue.</strong>
+</noscript>
+<div id="app"></div>
+<!-- built files will be auto injected -->
+</body>
+<script>
+
+    window._CONFIG = {};
+    //不要修改这里，修改.env配置文件，开发环境修改 .env.development 文件 生产和灰度环境地址请配置到 .env.[环境] 文件中 ,构建的时候选择对应的 build-[环境] 命令
+    window._CONFIG['baseUrl'] = '<%= VUE_APP_AJAX_PATH %>'
+</script>
 </html>
